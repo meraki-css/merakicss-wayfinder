@@ -1,0 +1,190 @@
+/* WAYFINDER */
+.wayfinder {
+  width:100%;
+  background-color:#f2f2f2;
+  font-family: 'Quicksand', sans-serif;
+  position: sticky;
+  top:0;
+  display: flex;
+  align-items:center;
+  z-index:5;
+}
+
+/* brand name */
+.wayfinder-logo {
+  color:#4d4d4d;
+  position: relative;
+  left:4%;
+  width:25%;
+}
+
+.wayfinder-logo > h1 {
+  font-weight:500;
+}
+
+/* catalog items */
+.catalog-container {
+  position: relative;
+  width:75%;
+  right:2%;
+}
+
+.catalog-container > ul {
+  display: flex;
+  justify-content: flex-end;
+  width:100%;
+}
+
+.catalog > li {
+  float:left;
+  list-style-type:none;
+  position: relative;
+  margin-left:4%;
+  font-weight: 500;
+}
+
+.way-link {
+  color:#8c8c8c;
+  text-decoration:none;
+}
+
+/* menu (catalog) */
+.wayfinder-menu {
+  display:none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 5%;
+  width:100%;
+  justify-content: center;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  margin: 3px 0;
+  transition: 0.4s;
+  background-color: black;
+}
+
+.change.bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.change.bar2 {
+  opacity: 0;
+}
+
+.change.bar3 {
+  -webkit-transform: rotate(45deg) translate(-3px, -3px);
+  transform: rotate(45deg) translate(-3px, -3px);
+}
+
+/* MEDIA QUERIES - wayfinder */
+/* extra-small */
+@media (max-width:900px) {
+
+  .wayfinder {
+    height:4em;
+  }
+
+  .wayfinder-menu {
+    display:flex;
+  }
+
+  .catalog-container {
+    width: 100%;
+    height:100%;
+    position: absolute;
+  }
+
+  .catalog {
+    position: fixed;
+    bottom: 15%;
+    width: 100%;
+    color: #8c8c8c; 
+    display: flex;
+    justify-content:center;  
+    flex-direction:column-reverse;
+  } 
+    
+  .catalog > li {
+    background-color: #f2f2f2;
+    padding: 7px;
+    text-align: center;
+    margin-bottom: 0.5%;
+    color: #8c8c8c;
+    font-size: 0.9585em;
+  }
+
+}
+
+/* small */
+@media (min-width:668px) {
+
+  .wayfinder {
+    height:4em;
+  }
+
+  .wayfinder-logo > h1 {
+    font-size:1.5075em;
+  }
+
+  .catalog > li {
+    padding: 10px;
+    font-size:1.0595em;
+  }
+
+}
+
+/* medium */
+@media (min-width:901px) {
+
+  .wayfinder {
+    height:4.25em;
+  }
+
+  .wayfinder-logo > h1 {
+    font-size:1.7550em;
+  }
+
+  .catalog > li {
+    padding: 0;
+    font-size:1.1595em;
+  }
+
+}
+
+/* large */
+@media (min-width:1301px) {
+
+  .wayfinder {
+    height:4.5em;
+  }
+
+  .wayfinder-logo > h1 {
+    font-size:1.9550em;
+  }
+
+  .catalog > li {
+    font-size:1.2595em;
+  }
+
+}
+
+/* extra-large */
+@media (min-width:1601px) {
+
+  .wayfinder {
+    height:4.65em;
+  }
+
+  .wayfinder-logo > h1 {
+    font-size:1.8550em;
+  }
+
+  .catalog > li {
+    font-size:1.2595em;
+  }
+
+}
